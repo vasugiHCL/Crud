@@ -51,9 +51,9 @@ public class AccountController {
 		
 	}
 	
-	@GetMapping(value="allacc")
-	public List<Account>getAllAccount(){
-		return as.getAllAccount();
+	@GetMapping(value="/account")
+	public ResponseEntity<List<Account>>getAllAccount(){
+		return new ResponseEntity<List<Account>>(HttpStatus.OK);
 	}
 	
 	@GetMapping(path="account/{isfc}")
